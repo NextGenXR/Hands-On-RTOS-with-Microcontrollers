@@ -63,7 +63,7 @@ int main(void)
 	//using an assert to ensure proper task creation
 	assert_param(xTaskCreate(BlueTask, "BlueTask", STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, &blueTaskHandle) == pdPASS);
 
-	//xTaskCreateStatic returns task hanlde
+	//xTaskCreateStatic returns task handle
 	//always passes since memory was statically allocated
 	xTaskCreateStatic(	RedTask, "RedTask", STACK_SIZE, NULL,
 						tskIDLE_PRIORITY + 1,
